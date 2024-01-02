@@ -9,8 +9,8 @@ variable "account_no" {}
 variable "default_vpc_id" {}
 variable "default_vpc_cidr" {}
 variable "default_route_table_id" {}
-#variable "kms_key_id" {}
-#variable "instance_class" {}
+variable "kms_key_id" {}
+variable "instance_class" {}
 #variable "docdb_instance_count" {}
 #variable "docdb_instance_class" {}
 #variable "ec_node_type" {}
