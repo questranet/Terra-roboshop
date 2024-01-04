@@ -30,75 +30,75 @@ ec_node_count = 1
 # Rabbitmq
 rabbitmq_instance_type = "t3.micro"
 
-#components = {
-#  frontend = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 80
-#    lb_type                = "public"
-#    listener_rule_priority = 100
-#  }
-#  catalogue = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 100
-#  }
-#  cart = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 101
-#  }
-#  user = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 102
-#  }
-#  shipping = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 103
-#  }
-#  payment = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 104
-#  }
-#  dispatch = {
-#    count                  = 1
-#    instance_type          = "t3.micro"
-#    app_port               = 8080
-#    lb_type                = "private"
-#    listener_rule_priority = 105
-#  }
-#}
-#
-#
-#alb = {
-#  public = {
-#    internal          = false
-#    port              = 443
-#    protocol          = "HTTPS"
-#    ssl_policy        = "ELBSecurityPolicy-2016-08"
-#    certificate_arn   = "arn:aws:acm:us-east-1:739561048503:certificate/6414e7b8-1da5-4a92-a3a8-d66334ae5696"
-#    alb_sg_allow_cidr = "0.0.0.0/0"
-#  }
-#  private = {
-#    internal          = true
-#    port              = 80
-#    protocol          = "HTTP"
-#    ssl_policy        = null
-#    certificate_arn   = null
-#    alb_sg_allow_cidr = "10.0.0.0/16"
-#  }
-#}
+components = {
+  frontend = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 80
+    lb_type                = "public"
+    listener_rule_priority = 100
+  }
+  catalogue = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 100
+  }
+  cart = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 101
+  }
+  user = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 102
+  }
+  shipping = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 103
+  }
+  payment = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 104
+  }
+  dispatch = {
+    count                  = 1
+    instance_type          = "t3.micro"
+    app_port               = 8080
+    lb_type                = "private"
+    listener_rule_priority = 105
+  }
+}
+
+
+alb = {
+  public = {
+    internal          = false
+    port              = 443
+    protocol          = "HTTPS"
+    ssl_policy        = "ELBSecurityPolicy-2016-08"
+    certificate_arn   = "arn:aws:acm:us-east-1:739561048503:certificate/6414e7b8-1da5-4a92-a3a8-d66334ae5696"
+    alb_sg_allow_cidr = "0.0.0.0/0"
+  }
+  private = {
+    internal          = true
+    port              = 80
+    protocol          = "HTTP"
+    ssl_policy        = null
+    certificate_arn   = null
+    alb_sg_allow_cidr = "10.0.0.0/16"
+  }
+}
 
