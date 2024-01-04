@@ -89,8 +89,9 @@ alb = {
     port              = 443
     protocol          = "HTTPS"
     ssl_policy        = "ELBSecurityPolicy-2016-08"
-    certificate_arn   = "arn:aws:acm:us-east-1:739561048503:certificate/6414e7b8-1da5-4a92-a3a8-d66334ae5696"
+    certificate_arn   = "arn:aws:acm:us-east-1:008089408493:certificate/19ed6b98-b5e5-494e-beb8-cf3150cc3368"
     alb_sg_allow_cidr = "0.0.0.0/0"
+
   }
   private = {
     internal          = true
