@@ -100,7 +100,7 @@ module "alb" {
 resource "aws_instance" "load-runner" {
   ami                    = "ami-03265a0778a880afb"
   instance_type          = "t3.medium"
-  vpc_security_group_ids = ["sg-07afa043b24022e4e"]
+  vpc_security_group_ids = ["sg-06b95a4a72147211d"]
   tags = {
     Name = "load-runner"
   }
