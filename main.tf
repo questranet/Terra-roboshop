@@ -97,27 +97,27 @@ module "alb" {
   certificate_arn        = each.value["certificate_arn"]
 }
 
-resource "aws_instance" "load-runner" {
-  ami                    = "ami-03265a0778a880afb"
-  instance_type          = "t3.medium"
-  vpc_security_group_ids = ["sg-06b95a4a72147211d"]
-  tags = {
-    Name = "load-runner"
-  }
-
-  provisioner "remote-exec" {
-    connection {
-      host               = self.private_ip
-      user               = "root"
-      password           = "DevOps321"
-    }
-    inline = [
-      "curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/docker/install.sh | sudo bash",
-      "docker pull robotshop/rs-load:latest"
-    ]
-  }
-
-}
+#resource "aws_instance" "load-runner" {
+#  ami                    = "ami-03265a0778a880afb"
+#  instance_type          = "t3.medium"
+#  vpc_security_group_ids = ["sg-06b95a4a72147211d"]
+#  tags = {
+#    Name = "load-runner"
+#  }
+#
+#  provisioner "remote-exec" {
+#    connection {
+#      host               = self.private_ip
+#      user               = "root"
+#      password           = "DevOps321"
+#    }
+#    inline = [
+#      "curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/docker/install.sh | sudo bash",
+#      "docker pull robotshop/rs-load:latest"
+#    ]
+#  }
+#
+#}
 
 #module "eks" {
 #  source = "git::https://github.com/questranet/tf-module-eks.git"
