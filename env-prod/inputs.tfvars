@@ -61,7 +61,7 @@ components = {
   }
   shipping = {
     count                  = 2
-    instance_type          = "t3.micro"
+    instance_type          = "t3.large"
     app_port               = 8080
     lb_type                = "private"
     listener_rule_priority = 103
@@ -92,6 +92,7 @@ alb = {
     certificate_arn   = "arn:aws:acm:us-east-1:008089408493:certificate/19ed6b98-b5e5-494e-beb8-cf3150cc3368"
     alb_sg_allow_cidr = "0.0.0.0/0"
   }
+
   private = {
     internal          = true
     port              = 80
@@ -101,3 +102,6 @@ alb = {
     alb_sg_allow_cidr = "10.20.0.0/16"
   }
 }
+
+eks_instance_types = ["c6in.xlarge"]
+eks_node_count = 3
