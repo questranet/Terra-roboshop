@@ -97,14 +97,14 @@ module "alb" {
   certificate_arn        = each.value["certificate_arn"]
 }
 
-#resource "aws_instance" "load-runner" {
-#  ami                    = "ami-03265a0778a880afb"
-#  instance_type          = "t3.medium"
-#  vpc_security_group_ids = ["sg-06b95a4a72147211d"]
-#  tags = {
-#    Name = "load-runner"
-#  }
-#
+resource "aws_instance" "load-runner" {
+  ami                    = "ami-03265a0778a880afb"
+  instance_type          = "t3.medium"
+  vpc_security_group_ids = ["sg-00a0f8d9e29fb1216"]
+  tags = {
+    Name = "load-runner"
+  }
+
 #  provisioner "remote-exec" {
 #    connection {
 #      host               = self.private_ip
@@ -117,7 +117,7 @@ module "alb" {
 #    ]
 #  }
 #
-#}
+}
 #
 #module "eks" {
 #  source = "git::https://github.com/questranet/tf-module-eks.git"
