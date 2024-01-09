@@ -60,7 +60,7 @@ components = {
     listener_rule_priority = 102
   }
   shipping = {
-    count                  = 2
+    count                  = 3
     instance_type          = "t3.large"
     app_port               = 8080
     lb_type                = "private"
