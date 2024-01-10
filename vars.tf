@@ -21,5 +21,5 @@ variable "bastion_node_cidr" {}
 variable "prometheus_cidr" {}
 variable "alb" {}
 variable "project_name" {}
-#variable "eks_instance_types" {}
-#variable "eks_node_count" {}
+variable "eks_instance_types" {}
+variable "eks_node_count" {}

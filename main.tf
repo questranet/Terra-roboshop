@@ -118,12 +118,12 @@ resource "aws_instance" "load-runner" {
   }
 
 }
-#
-#module "eks" {
-#  source = "git::https://github.com/questranet/tf-module-eks.git"
-#  project_name           = var.project_name
-#  env                    = var.env
-#  subnet_ids             = module.vpc.app_subnets
-#  instance_types         = var.eks_instance_types
-#  node_count             = var.eks_node_count
-#}
+
+module "eks" {
+  source = "git::https://github.com/questranet/tf-module-eks.git"
+  project_name           = var.project_name
+  env                    = var.env
+  subnet_ids             = module.vpc.app_subnets
+  instance_types         = var.eks_instance_types
+  node_count             = var.eks_node_count
+}

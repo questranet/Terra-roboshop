@@ -103,5 +103,5 @@ alb = {
   }
 }
 
-#eks_instance_types = ["c6in.xlarge"]
-#eks_node_count = 3
+eks_instance_types = ["c6in.xlarge"]
+eks_node_count = 3
